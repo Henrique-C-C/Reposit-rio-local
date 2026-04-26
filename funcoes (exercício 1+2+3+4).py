@@ -56,18 +56,3 @@ def calcula_pontos_regra_simples(lista_números_faces):
         k +=1
 
     return dicionário_pontos
-###
-
-#Quinto exercício:
-def calcula_pontos_soma(lista_números_inteiros):
-
-    j = 0
-    soma_simples = 0
-
-    while j < len(lista_números_inteiros):
-
-        soma_simples += lista_números_inteiros[j]
-
-        j +=1
-
-    return soma_simples

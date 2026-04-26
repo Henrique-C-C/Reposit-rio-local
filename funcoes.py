@@ -100,28 +100,3 @@ def calcula_pontos_sequencia_baixa(faces_dados_rolados):
         pontos = 15
 
     return pontos
-###
-
-#Sétimo exercício:
-def calcula_pontos_sequencia_alta(facesdadosrolados):
-
-    pontos2 = 0
-    p2 = 0
-
-    dicionário = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
-
-    while p2 < len(facesdadosrolados):
-        
-        dicionário[facesdadosrolados[p2]] = facesdadosrolados[p2]
-
-        p2 += 1
-
-    if dicionário[1] > 0 and dicionário[2] > 0 and dicionário[3] > 0 and dicionário[4] > 0 and dicionário[5] > 0:
-
-        pontos2 = 30
-    
-    elif dicionário[2] > 0 and dicionário[3] > 0 and dicionário[4] > 0 and dicionário[5] > 0 and dicionário[6] > 0:
-
-        pontos2 = 30
-
-    return pontos2

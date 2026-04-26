@@ -203,7 +203,7 @@ def calcula_pontos_quadra(listafacesdadosrolados):
 
     while o < len(lista4):
 
-        if lista4[o] >= 4:
+        if lista4[o] == 4:
             quadra = True
 
         o += 1

@@ -161,7 +161,7 @@ def calcula_pontos_full_house(faces_dados):
 
         return soma3
     
-    elif lista3 == [3,2]:
+    elif lista3 == [2,3]:
 
         return soma3
 

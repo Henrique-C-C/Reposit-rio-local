@@ -41,18 +41,3 @@ def remover_dado(dados_rolados,dados_guardados,dado_para_remover):
 
     return lista_proxima_jogada
 ###
-
-#Quarto exercício:
-def calcula_pontos_regra_simples(lista_números_faces):
-
-    dicionário_pontos = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
-
-    k = 0
-
-    while k < len(lista_números_faces):
-
-        dicionário_pontos[lista_números_faces[k]] += lista_números_faces[k]
-
-        k +=1
-
-    return dicionário_pontos

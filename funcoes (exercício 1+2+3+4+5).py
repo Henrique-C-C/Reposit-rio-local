@@ -71,32 +71,3 @@ def calcula_pontos_soma(lista_números_inteiros):
         j +=1
 
     return soma_simples
-###
-
-#Sexto exercício:
-def calcula_pontos_sequencia_baixa(faces_dados_rolados):
-
-    pontos = 0
-    p = 0
-
-    dicionário = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
-
-    while p < len(faces_dados_rolados):
-        
-        dicionário[faces_dados_rolados[p]] = faces_dados_rolados[p]
-
-        p += 1
-
-    if dicionário[1] > 0 and dicionário[2] > 0 and dicionário[3] > 0 and dicionário[4] > 0:
-
-        pontos = 15
-    
-    elif dicionário[2] > 0 and dicionário[3] > 0 and dicionário[4] > 0 and dicionário[5] > 0:
-
-        pontos = 15
-
-    elif dicionário[3] > 0 and dicionário[4] > 0 and dicionário[5] > 0 and dicionário[6] > 0:
-
-        pontos = 15
-
-    return pontos

@@ -19,6 +19,7 @@ def rolar_dados(número__de_dados):
 ###
 
 #Segundo exercício:
+
 def guardar_dado(lista_dados_rolados,lista_dados_estoque,índice_dado_guardar):
 
     lista_dados_estoque.append(lista_dados_rolados[índice_dado_guardar])
@@ -28,16 +29,3 @@ def guardar_dado(lista_dados_rolados,lista_dados_estoque,índice_dado_guardar):
     lista_próxima_jogada  = [lista_dados_rolados,lista_dados_estoque]
 
     return lista_próxima_jogada
-###
-
-#Terceiro exercício:
-def remover_dado(dados_rolados,dados_guardados,dado_para_remover):
-
-    dados_rolados.append(dados_guardados[dado_para_remover])
-
-    del dados_guardados[dado_para_remover]
-
-    lista_proxima_jogada = [dados_rolados,dados_guardados]
-
-    return lista_proxima_jogada
-###

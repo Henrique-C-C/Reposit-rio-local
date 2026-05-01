@@ -213,3 +213,22 @@ def calcula_pontos_quadra(listafacesdadosrolados):
 
     else: 
         return sem_quadra
+#décimo exercício:
+def calcula_pontos_quina(faces_dados):
+    pontos4 = 0
+    p4 = 0
+    dicionario4 = {}
+
+    while p4 < len(faces_dados):
+
+        if faces_dados[p4] not in dicionario4:
+            dicionario4[faces_dados[p4]] = 1
+        else:
+            dicionario4[faces_dados[p4]] += 1
+
+        p4 += 1
+        for quantidade in dicionario4.values():
+            if quantidade >= 5:
+                pontos4 = 50
+
+    return pontos4

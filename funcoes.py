@@ -249,3 +249,31 @@ def calcula_pontos_regra_avancada(lista5faces):
 
     return dicionárioregras
 ###
+
+#Décimo segundo exercício:
+def faz_jogada(cincodados,categoria,cartela):
+    
+    regra_simples =  {1:-1,2:-1,3:-1,4:-1,5:-1,6:-1}
+
+    regra_avancada = {'sem_combinacao':-1,'quadra': -1,'full_house': -1,'sequencia_baixa': -1,'sequencia_alta': -1,'cinco_iguais': -1}
+
+    if len(categoria) == 1:
+        categoria = int(categoria)
+
+    if categoria in regra_simples:
+
+        simples = calcula_pontos_regra_simples(cincodados)
+
+        regra_simples[categoria] = simples[categoria]        
+
+        cartela["regra_simples"] = regra_simples 
+    
+    elif categoria in regra_avancada:
+
+        avancada= calcula_pontos_regra_avancada(cincodados)
+
+        regra_avancada[categoria] = avancada[categoria]
+
+        cartela["regra_avancada"] = regra_avancada
+
+    return cartela

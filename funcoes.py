@@ -235,3 +235,17 @@ def calcula_pontos_quina(faces_dados):
                 pontos4 = 50
 
     return pontos4
+###
+
+#Décimo primeiro exercício:
+def calcula_pontos_regra_avancada(lista5faces):
+
+    dicionárioregras = {'cinco_iguais': calcula_pontos_quina(lista5faces),
+    'full_house': calcula_pontos_full_house(lista5faces),
+    'quadra': calcula_pontos_quadra(lista5faces),
+    'sem_combinacao': calcula_pontos_soma(lista5faces),
+    'sequencia_alta': calcula_pontos_sequencia_alta(lista5faces),
+    'sequencia_baixa': calcula_pontos_sequencia_baixa(lista5faces)}
+
+    return dicionárioregras
+###

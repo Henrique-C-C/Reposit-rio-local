@@ -29,7 +29,6 @@ while j < 12:
     rerrolagens = 0
     lista_dados_guardados = []
     lista_faces_dados = []
-    listacombinação = []
 
     i = 0
 
@@ -96,7 +95,15 @@ while j < 12:
         print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
         opção = input()
 
+        while opção not in opções:
+            print("Opção inválida. Tente novamente.")
+            opção = input()
+
+        opção = int(opção)
+
     if opção == 0:
+
+        listacombinação = []
 
         print("Digite a combinação desejada:")
         combinação = input()
@@ -104,8 +111,7 @@ while j < 12:
         if combinação  in listacombinação:
             print("Essa combinação já foi utilizada.")
 
-        if combinação not in cartela["regra_avancada"]:
-            if int(combinação) not in cartela["regra_simples"]:
+        if combinação not in cartela["regra_avancada"] and combinação not in ["1","2","3","4","5","6"]:
                 print("Combinação inválida. Tente novamente.")
 
         listacombinação.append(combinação)

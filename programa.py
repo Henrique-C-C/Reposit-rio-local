@@ -1,7 +1,7 @@
 import random
 import funcoes
 
-opções = [1,2,3,4,0]
+opções = ["1","2","3","4","0"]
 
 cartela = {
     'regra_simples':  {
@@ -44,25 +44,27 @@ while j < 12:
     print(f"Dados rolados: {lista_faces_dados}")
     print(f"Dados guardados: {lista_dados_guardados}")
     print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
-    opção = int(input(""))
+    opção = input()
 
     while opção not in opções:
 
         print("Opção inválida. Tente novamente.")
-        opção = int(input(""))
+        opção = input()
+
+    opção = int(opção)
     
     while opção != 0: 
         if opção == 1:
             
             print("Digite o índice do dado a ser guardado (0 a 4):")
-            índice = int(input(""))
+            índice = int(input())
             lista_dados_guardados.append(lista_faces_dados[índice])
             del lista_faces_dados[índice]
 
         elif opção == 2:
 
             print("Digite o índice do dado a ser removido (0 a 4):")
-            dado_para_remover = int(input(""))
+            dado_para_remover = int(input())
             lista_faces_dados.append(lista_dados_guardados[dado_para_remover])
             del lista_dados_guardados[dado_para_remover]
 
@@ -92,18 +94,19 @@ while j < 12:
         print(f"Dados rolados: {lista_faces_dados}")
         print(f"Dados guardados: {lista_dados_guardados}")
         print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
-        opção = int(input(""))
+        opção = input()
 
     if opção == 0:
 
         print("Digite a combinação desejada:")
-        combinação = input("")
+        combinação = input()
         
         if combinação  in listacombinação:
             print("Essa combinação já foi utilizada.")
 
-        if combinação not in cartela:
-            print("Combinação inválida. Tente novamente.")
+        if combinação not in cartela["regra_avancada"]:
+            if int(combinação) not in cartela["regra_simples"]:
+                print("Combinação inválida. Tente novamente.")
 
         listacombinação.append(combinação)
 
@@ -115,11 +118,12 @@ while j < 12:
 pontuação = 0
 soma_simples = 0
 
-p = 0
+p = 1
 
-while p < len(cartela["regra_simples"]):
+while p < 7:
 
     soma_simples += cartela["regra_simples"][p]
+    p +=1
 
 if soma_simples >= 63:
     pontuação += 35

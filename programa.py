@@ -113,6 +113,16 @@ while j < 12:
         j +=1
 
 pontuação = 0
+soma_simples = 0
+
+p = 0
+
+while p < len(cartela["regra_simples"]):
+
+    soma_simples += cartela["regra_simples"][p]
+
+if soma_simples >= 63:
+    pontuação += 35
 
 for regras,dicionario in cartela.items():
 
@@ -120,4 +130,5 @@ for regras,dicionario in cartela.items():
 
         pontuação += valores
 
-print("Pontuação total: {pontuacao}")
+print(cartela)
+print(f"Pontuação total: {pontuação}")
